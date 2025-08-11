@@ -51,6 +51,11 @@ MonoBehaviour:
     - Wonder Wood
     - Easy
     - Fight
-    gameData: []
+    gameData:
+    - Wave
+    - Attack
+    - Attack Speed
+    - Max HP
+    - Journey In Progress
   textToFind: 
   debugTextOnValidate: 0

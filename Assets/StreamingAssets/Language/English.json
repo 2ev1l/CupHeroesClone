@@ -6,5 +6,11 @@
         "Easy",
         "Fight"
     ],
-    "gameData": []
+    "gameData": [
+        "Wave",
+        "Attack",
+        "Attack Speed",
+        "Max HP",
+        "Journey In Progress"
+    ]
 }
