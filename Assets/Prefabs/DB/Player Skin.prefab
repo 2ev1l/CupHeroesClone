@@ -3923,7 +3923,7 @@ GameObject:
   - component: {fileID: 1933624400963804055}
   - component: {fileID: 9036818172062860465}
   m_Layer: 5
-  m_Name: Player
+  m_Name: Player Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
