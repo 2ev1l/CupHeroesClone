@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     id: 0
-    health:
-      value: 100
-    attack:
-      value: 1
-    attackSpeed:
-      value: 1
+    stats:
+      health:
+        value: 100
+      attack:
+        value: 1
+      attackSpeed:
+        value: 1
     moneyReward: 2
     prefab: {fileID: 2667231338443795733, guid: 3091250fdea1e2a4bb61190d0614b389, type: 3}
