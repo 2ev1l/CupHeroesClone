@@ -41,8 +41,6 @@ namespace Game.UI.Cursor
             if (!IsButtonLeft(eventData) || !IsActive) return;
             lastLocation = CursorLocation.In;
             lastGameObject = eventData.pointerEnter;
-            if (!doRaycastOnly)
-                clickSoundRequest.Send();
         }
         public void OnPointerExit(PointerEventData eventData)
         {
