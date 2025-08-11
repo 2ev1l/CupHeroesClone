@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Icon-Pattern-Sword-Heart_0: 2441352075599308052
+      Icon-Pattern-Sword-Heart_1: 4493859752407633908
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
