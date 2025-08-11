@@ -13,6 +13,8 @@
         "Max HP",
         "Journey In Progress",
         "Select a new skill",
-        "Buy"
+        "Buy",
+        "Start New Game",
+        "You Died"
     ]
 }

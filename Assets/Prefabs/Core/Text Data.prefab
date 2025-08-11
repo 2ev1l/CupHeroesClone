@@ -59,5 +59,7 @@ MonoBehaviour:
     - Journey In Progress
     - Select a new skill
     - Buy
+    - Start New Game
+    - You Died
   textToFind: 
   debugTextOnValidate: 0
