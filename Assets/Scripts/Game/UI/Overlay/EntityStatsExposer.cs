@@ -20,7 +20,8 @@ namespace Game.UI.Overlay
         public void SetMaxHealthText(float value)
         {
             healthSlider.maxValue = value;
-            maxHealthText.text = StatType.Health.ToDigitText(value);
+            if (maxHealthText != null)
+                maxHealthText.text = StatType.Health.ToDigitText(value);
         }
         public void SetHealthText(float value) => healthSlider.value = value;
         public void SetAttackText(float value) => attackText.text = StatType.Attack.ToDigitText(value);

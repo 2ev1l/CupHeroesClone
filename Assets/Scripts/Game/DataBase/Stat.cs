@@ -26,7 +26,7 @@ namespace Game.DataBase
         public abstract StatType GetStatType();
         public void SetValueOrZero(float value)
         {
-            if (value < 0)
+            if (value <= 0)
                 value = 0f;
             SetValue(value);
         }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using Universal.Collections;
 
 namespace Game.DataBase
 {
@@ -13,8 +14,11 @@ namespace Game.DataBase
         [SerializeField] private EntityStats stats = new();
         public int MoneyReward => moneyReward;
         [SerializeField][Min(0)] private int moneyReward = 1;
-        public GameObject Prefab => prefab;
-        [SerializeField] private GameObject prefab;
+        /// <summary>
+        /// 'Entity'
+        /// </summary>
+        public StaticPoolableObject Prefab => prefab;
+        [SerializeField] private StaticPoolableObject prefab;
         #endregion fields & properties
 
         #region methods

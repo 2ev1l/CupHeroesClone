@@ -36,9 +36,14 @@ namespace Game.UI
         }
 
         [SerializedMethod]
-        public void StartNewGame()
+        public void ResetTotalProgress()
         {
             SavingController.Instance.ResetTotalProgress();
+        }
+        [SerializedMethod]
+        public void StartNewGame()
+        {
+            ResetTotalProgress();
             LoadGame();
         }
 

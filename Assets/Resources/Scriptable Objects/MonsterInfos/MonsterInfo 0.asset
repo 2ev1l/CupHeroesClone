@@ -15,6 +15,8 @@ MonoBehaviour:
   data:
     id: 0
     stats:
+      maxHealth:
+        value: 100
       health:
         value: 100
       attack:
@@ -22,4 +24,4 @@ MonoBehaviour:
       attackSpeed:
         value: 1
     moneyReward: 2
-    prefab: {fileID: 2667231338443795733, guid: 3091250fdea1e2a4bb61190d0614b389, type: 3}
+    prefab: {fileID: 6740291044595286611, guid: 091418b281e652a42a13f68145771b30, type: 3}
