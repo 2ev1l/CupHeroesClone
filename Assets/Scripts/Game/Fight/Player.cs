@@ -20,7 +20,7 @@ namespace Game.Fight
         [SerializeField] private float arrowSpeed = 30f;
         [SerializeField] private float arrowHeight = 3f;
         [SerializeField] private ObjectPool<StaticPoolableObject> arrowPool;
-        
+
         private List<Monster> monsters = null;
         #endregion fields & properties
 
@@ -70,13 +70,15 @@ namespace Game.Fight
         {
             Arrow arrow = (Arrow)arrowPool.GetObject();
             arrow.transform.localPosition = transform.localPosition;
-            
+
             Vector2 start2D = new(arrow.transform.position.x, arrow.transform.position.y);
             Vector2 target2D = new(toMonster.transform.position.x, toMonster.transform.position.y);
             float distance2D = Vector2.Distance(start2D, target2D);
-            float flightDuration = distance2D / arrowSpeed * 0.8f;
-            
-            arrow.Initialize(toMonster.transform.position, flightDuration, arrowHeight);
+            float flightDuration = distance2D / arrowSpeed;
+
+            target2D = new(toMonster.transform.position.x - distance2D * flightDuration / toMonster.MoveTimeToPlayer, toMonster.transform.position.y);
+
+            arrow.Initialize(target2D, flightDuration, arrowHeight);
             StartCoroutine(AttackIEnumerator(toMonster, flightDuration));
         }
 

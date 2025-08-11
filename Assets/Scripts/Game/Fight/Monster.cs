@@ -8,7 +8,8 @@ namespace Game.Fight
     {
         #region fields & properties
         private static Player Player => Player.Instance;
-        [SerializeField] private float moveTimeToPlayer = 7f;
+        public float MoveTimeToPlayer => moveTimeToPlayer;
+        [SerializeField][Min(1f)] private float moveTimeToPlayer = 7f;
         private const float PLAYER_OFFSET_X = 100;
         private const float PLAYER_OFFSET_Y = 50;
         #endregion fields & properties

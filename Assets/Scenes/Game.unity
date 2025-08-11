@@ -2578,6 +2578,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1156490688}
     - target: {fileID: 5453647544985118877, guid: b7cc6a39f5c82e84dbd025d67fc2ba60, type: 3}
+      propertyPath: arrowSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453647544985118877, guid: b7cc6a39f5c82e84dbd025d67fc2ba60, type: 3}
       propertyPath: enemySpawn
       value: 
       objectReference: {fileID: 1456926178}
