@@ -29,12 +29,17 @@ namespace Game.UI
         {
             Application.Quit();
         }
+        [SerializedMethod]
+        public void LoadGame()
+        {
+            SceneLoader.LoadScene("Game");
+        }
 
         [SerializedMethod]
         public void StartNewGame()
         {
             SavingController.Instance.ResetTotalProgress();
-            SceneLoader.LoadScene("Game");
+            LoadGame();
         }
 
         [SerializedMethod]
