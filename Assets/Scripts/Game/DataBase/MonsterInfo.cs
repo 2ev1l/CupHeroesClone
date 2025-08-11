@@ -6,12 +6,11 @@ namespace Game.DataBase
     public class MonsterInfo : DBInfo
     {
         #region fields & properties
-        public Health Health => health;
-        [SerializeField] private Health health = new(100);
-        public Attack Attack => attack;
-        [SerializeField] private Attack attack = new(1);
-        public AttackSpeed AttackSpeed => attackSpeed;
-        [SerializeField] private AttackSpeed attackSpeed = new(1);
+        /// <summary>
+        /// Returns clone of 'stats' to prevent db modifying
+        /// </summary>
+        public EntityStats Stats => stats.Clone();
+        [SerializeField] private EntityStats stats = new();
         public int MoneyReward => moneyReward;
         [SerializeField][Min(0)] private int moneyReward = 1;
         public GameObject Prefab => prefab;
