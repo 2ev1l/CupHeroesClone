@@ -6,7 +6,10 @@ namespace Game.DataBase
     public class MonsterInfo : DBInfo
     {
         #region fields & properties
-        public EntityStats Stats => stats;
+        /// <summary>
+        /// Returns clone of 'stats' to prevent db modifying
+        /// </summary>
+        public EntityStats Stats => stats.Clone();
         [SerializeField] private EntityStats stats = new();
         public int MoneyReward => moneyReward;
         [SerializeField][Min(0)] private int moneyReward = 1;
