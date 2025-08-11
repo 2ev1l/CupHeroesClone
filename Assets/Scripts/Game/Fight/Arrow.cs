@@ -32,12 +32,6 @@ namespace Game.Fight
         }
         public void Update()
         {
-            if (elapsedTime >= flightDuration)
-            {
-                DisableObject();
-                return;
-            }
-
             elapsedTime += Time.deltaTime;
             float t = elapsedTime / flightDuration;
             Vector3 currentPosition = Vector3.Lerp(startPos, targetPos, t);
@@ -57,6 +51,11 @@ namespace Game.Fight
             {
                 float angle = Mathf.Atan2(direction2D.y, direction2D.x) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
+            if (elapsedTime >= flightDuration)
+            {
+                DisableObject();
+                return;
             }
             #endregion methods
         }
