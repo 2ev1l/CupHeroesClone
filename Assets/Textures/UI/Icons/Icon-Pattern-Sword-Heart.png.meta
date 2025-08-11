@@ -1,7 +1,13 @@
 fileFormatVersion: 2
-guid: 29c8329beedb0ee408ad403af7a9951a
+guid: d7470ba566008034ca3a547b834da10c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2441352075599308052
+    second: Icon-Pattern-Sword-Heart_0
+  - first:
+      213: 4493859752407633908
+    second: Icon-Pattern-Sword-Heart_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -45,7 +51,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -108,7 +114,51 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Icon-Pattern-Sword-Heart_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 63
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41562c527cc61e120800000000000000
+      internalID: 2441352075599308052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon-Pattern-Sword-Heart_1
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 63
+        width: 130
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff8ea4a2a56d5e30800000000000000
+      internalID: 4493859752407633908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
