@@ -16,6 +16,7 @@ namespace Game.Serialization.World
         /// </summary>
         public UnityAction<int> OnWaveIncreased;
 
+        public WaveInfo CurrentWaveInfo => DB.Instance.Waves.Data[currentWave].Data;
         public int CurrentWave => currentWave;
         [SerializeField] private int currentWave = 0;
         #endregion fields & properties

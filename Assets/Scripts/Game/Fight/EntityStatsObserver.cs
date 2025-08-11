@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Universal.Core;
 
-namespace Game.UI.Overlay
+namespace Game.Fight
 {
     public class EntityStatsObserver : MonoBehaviour
     {
@@ -33,11 +33,7 @@ namespace Game.UI.Overlay
         #region methods
         public void Initialize(EntityStats stats)
         {
-            if (isInitialized)
-            {
-                Debug.LogError("Trying to initialize again", this);
-                return;
-            }
+            if (isInitialized) UnSubscribe();
             this.stats = stats;
             isInitialized = true;
             Subscribe();
@@ -62,7 +58,7 @@ namespace Game.UI.Overlay
             OnUnSubscribe();
             isSubscribed = false;
         }
-        protected virtual void InvokeEvents()
+        public virtual void InvokeEvents()
         {
             OnMaxHealthChanged(stats.MaxHealth.Value);
             OnHealthChanged(stats.Health.Value);

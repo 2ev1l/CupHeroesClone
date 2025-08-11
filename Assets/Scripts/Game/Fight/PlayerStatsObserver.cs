@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Game.UI.Overlay
+namespace Game.Fight
 {
     public class PlayerStatsObserver : EntityStatsObserver
     {
@@ -18,11 +18,6 @@ namespace Game.UI.Overlay
         #endregion fields & properties
 
         #region methods
-        private void Awake()
-        {
-            Initialize(GameData.Data.PlayerData.Stats);
-            InvokeEvents();
-        }
         protected override void OnSubscribe()
         {
             base.OnSubscribe();
@@ -37,7 +32,7 @@ namespace Game.UI.Overlay
         {
             OnWalletChangedEvent?.Invoke(currentValue);
         }
-        protected override void InvokeEvents()
+        public override void InvokeEvents()
         {
             base.InvokeEvents();
             OnWalletChanged(GameData.Data.PlayerData.Wallet.Value, 0);
