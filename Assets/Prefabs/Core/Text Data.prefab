@@ -62,5 +62,6 @@ MonoBehaviour:
     - Start New Game
     - You Died
     - Victory!
+    - Health
   textToFind: 
   debugTextOnValidate: 0
