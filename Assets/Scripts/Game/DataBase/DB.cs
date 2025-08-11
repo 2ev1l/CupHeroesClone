@@ -32,6 +32,13 @@ namespace Game.DataBase
             }
         }
         private static DB instance;
+
+        public DBSOSet<MonsterInfoSO> Monsters => monsters;
+        [SerializeField] private DBSOSet<MonsterInfoSO> monsters;
+        public DBSOSet<CardInfoSO> Cards => cards;
+        [SerializeField] private DBSOSet<CardInfoSO> cards;
+        public DBSOSet<WaveInfoSO> Waves => waves;
+        [SerializeField] private DBSOSet<WaveInfoSO> waves;
         #endregion fields & properties
 
         #region methods
@@ -56,6 +63,9 @@ namespace Game.DataBase
             AssetDatabase.Refresh();
             Undo.RegisterCompleteObjectUndo(this, "Update DB");
 
+            monsters.CollectAll();
+            cards.CollectAll();
+            waves.CollectAll();
             //call dbset.CollectAll()
 
             EditorUtility.SetDirty(this);
@@ -70,6 +80,14 @@ namespace Game.DataBase
             //call dbset.CatchExceptions(x => ...)
             System.Exception e = new();
 
+            monsters.CatchExceptions(x => x.Data.Prefab == null, e, "Prefab must be not null");
+
+            cards.CatchExceptions(x => x.Data.PreviewSprite == null, e, "Preview sprite must be not null");
+            cards.CatchExceptions(x => x.Data.StatChanges.Count == 0, e, "Stat changes must be > 0");
+            cards.CatchExceptions(x => x.Data.StatChanges.Exists(x => x.ChangeValue == 0, out _), e, "Changed stat value must be != 0");
+
+            waves.CatchExceptions(x => x.Data.Monsters.Count == 0, e, "Monsters must be > 0");
+            waves.CatchExceptions(x => x.Data.PossibleCards.Count < WaveInfo.MAX_CARDS, e, $"Max cards must be >= {WaveInfo.MAX_CARDS}");
         }
 
 #endif //UNITY_EDITOR

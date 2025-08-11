@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cef75c94ab6bcc42b26fab9330a25f5, type: 3}
+  m_Name: WaveInfo 0
+  m_EditorClassIdentifier: 
+  data:
+    id: 0
+    monsters:
+    - {fileID: 11400000, guid: b46d103f5f12c94468e2fa425df3138e, type: 2}
+    possibleCards:
+    - {fileID: 11400000, guid: 7172474493bcf9d4eb4d0cf0e8c05b4a, type: 2}
+    - {fileID: 11400000, guid: 29217f33b0f4680419b9e06380e98a2d, type: 2}
+    - {fileID: 11400000, guid: 5d7aaa89ef897fe458bbdf4c6605bde8, type: 2}
