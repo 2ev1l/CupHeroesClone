@@ -9,6 +9,8 @@ namespace Game.DataBase
     public class EntityStats : ICloneable<EntityStats>
     {
         #region fields & properties
+        public Health MaxHealth => maxHealth;
+        [SerializeField] private Health maxHealth = new(100);
         public Health Health => health;
         [SerializeField] private Health health = new(100);
         public Attack Attack => attack;
@@ -18,9 +20,10 @@ namespace Game.DataBase
         #endregion fields & properties
 
         #region methods
-        public EntityStats Clone() => new(health.Value, attack.Value, attackSpeed.Value);
-        public EntityStats(float health, float attack, float attackSpeed)
+        public EntityStats Clone() => new(maxHealth.Value, health.Value, attack.Value, attackSpeed.Value);
+        public EntityStats(float maxHealth, float health, float attack, float attackSpeed)
         {
+            this.maxHealth = new(maxHealth);
             this.health = new(health);
             this.attack = new(attack);
             this.attackSpeed = new(attackSpeed);
