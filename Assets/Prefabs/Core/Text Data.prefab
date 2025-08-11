@@ -57,5 +57,7 @@ MonoBehaviour:
     - Attack Speed
     - Max HP
     - Journey In Progress
+    - Select a new skill
+    - Buy
   textToFind: 
   debugTextOnValidate: 0

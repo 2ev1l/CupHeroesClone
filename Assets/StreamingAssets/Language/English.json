@@ -11,6 +11,8 @@
         "Attack",
         "Attack Speed",
         "Max HP",
-        "Journey In Progress"
+        "Journey In Progress",
+        "Select a new skill",
+        "Buy"
     ]
 }
