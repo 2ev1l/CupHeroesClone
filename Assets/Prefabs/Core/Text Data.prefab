@@ -61,5 +61,6 @@ MonoBehaviour:
     - Buy
     - Start New Game
     - You Died
+    - Victory!
   textToFind: 
   debugTextOnValidate: 0
