@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 98341989}
   - component: {fileID: 98341990}
   - component: {fileID: 98341991}
+  - component: {fileID: 98341992}
   m_Layer: 5
   m_Name: Control
   m_TagString: Untagged
@@ -168,6 +169,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aba969d8aa415542920bf7396b6bd76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnNewWaveLoad:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 98341992}
+        m_TargetAssemblyTypeName: Game.Fight.FightSerializationController, Game.Fight
+        m_MethodName: SaveParameters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFightStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -255,6 +271,18 @@ MonoBehaviour:
     originalPrefab: {fileID: 6740291044595286611, guid: 091418b281e652a42a13f68145771b30, type: 3}
     parentForSpawn: {fileID: 1456926178}
     hideObjectsInHierarchy: 0
+--- !u!114 &98341992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98341988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8d16b3a035c034cacf6feeba319975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &117941788 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1267922883653650156, guid: b7cc6a39f5c82e84dbd025d67fc2ba60, type: 3}

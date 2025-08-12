@@ -24,6 +24,14 @@ namespace Game.Serialization.World
 
         #region methods
         public static void SetData(GameData value) => data = value;
+        /// <summary>
+        /// This method will update nothing in scene. Using as backup
+        /// </summary>
+        /// <param name="value"></param>
+        public void SetPlayerData(PlayerData value)
+        {
+            playerData = value;
+        }
         #endregion methods
     }
 }

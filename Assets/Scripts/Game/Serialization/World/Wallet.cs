@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Universal.Core;
 
 namespace Game.Serialization.World
 {
     [System.Serializable]
-    public class Wallet
+    public class Wallet: ICloneable<Wallet>
     {
         #region fields & properties
         /// <summary>
@@ -52,6 +53,11 @@ namespace Game.Serialization.World
             int amountChanged = newValue - value;
             this.value = newValue;
             OnValueChanged?.Invoke(value, amountChanged);
+        }
+
+        public Wallet Clone()
+        {
+            return new(this.value);
         }
 
         public Wallet() { }
