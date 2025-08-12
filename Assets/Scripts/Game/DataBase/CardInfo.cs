@@ -13,6 +13,8 @@ namespace Game.DataBase
         [SerializeField] private Sprite previewSprite;
         public IReadOnlyList<StatChange> StatChanges => statChanges;
         [SerializeField] private List<StatChange> statChanges;
+        public int Price => price;
+        [SerializeField][Min(1)] private int price = 1;
         #endregion fields & properties
 
         #region methods

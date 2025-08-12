@@ -18,6 +18,19 @@ namespace Game.DataBase
         [SerializeField] private Attack attack = new(10);
         public AttackSpeed AttackSpeed => attackSpeed;
         [SerializeField] private AttackSpeed attackSpeed = new(1);
+        /// <summary>
+        /// 0 - MaxHealth; <br></br>
+        /// 1 - Health; <br></br>
+        /// 2 - Atk; <br></br>
+        /// 3 - Aspd;
+        /// </summary>
+        public List<Stat> AllStats => new()
+        {
+            MaxHealth,
+            Health,
+            Attack,
+            AttackSpeed
+        };
         #endregion fields & properties
 
         #region methods

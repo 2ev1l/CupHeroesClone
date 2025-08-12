@@ -17,7 +17,7 @@ namespace Game.UI.Overlay
         public void DoAnimation(float changedValue)
         {
             if (!CanDoAnimation(changedValue)) return;
-            string text = $"{(changedValue >= 0 ? "+" : "-")}{changedValue}";
+            string text = $"{(changedValue >= 0 ? "+" : "")}{changedValue}";
             textFactory.SpawnText(text);
         }
         public bool CanDoAnimation(float changedValue)

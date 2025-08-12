@@ -24,13 +24,14 @@ namespace Game.Serialization.World
         #region methods
         public bool TryIncreaseWave()
         {
-            if (currentWave >= DB.Instance.Waves.Data.Count) return false;
+            if (currentWave + 1 >= DB.Instance.Waves.Data.Count) return false;
             IncreaseWave();
             return true;
         }
         private void IncreaseWave()
         {
             currentWave++;
+            OnWaveIncreased?.Invoke(currentWave);
         }
         #endregion methods
     }
