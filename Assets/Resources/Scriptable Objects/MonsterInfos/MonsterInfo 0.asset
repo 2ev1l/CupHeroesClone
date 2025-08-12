@@ -16,9 +16,9 @@ MonoBehaviour:
     id: 0
     stats:
       maxHealth:
-        value: 100
+        value: 2
       health:
-        value: 100
+        value: 2
       attack:
         value: 1
       attackSpeed:

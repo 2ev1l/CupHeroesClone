@@ -2,11 +2,13 @@ using EditorCustom.Attributes;
 using Game.Animation;
 using Game.DataBase;
 using Game.Serialization.World;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Universal.Collections;
 using Universal.Collections.Generic;
+using Zenject;
 
 namespace Game.Fight
 {
@@ -25,10 +27,30 @@ namespace Game.Fight
         #endregion fields & properties
 
         #region methods
+        private void OnEnable()
+        {
+            Initialize(GameData.Data.PlayerData.Stats);
+            GameData.Data.WaveData.OnWaveIncreased += SetMoveAnimation;
+            SetMoveAnimation();
+        }
+        private void OnDisable()
+        {
+            GameData.Data.WaveData.OnWaveIncreased -= SetMoveAnimation;
+        }
         public override void Initialize(EntityStats stats)
         {
             base.Initialize(stats);
             Instance = this;
+        }
+        private void SetMoveAnimation(int _)
+        {
+            SetIdleAnimation();
+            SetMoveAnimation();
+        }
+        protected override void SetDamagedAnimation()
+        {
+            base.SetDamagedAnimation();
+            SetIdleAnimation();
         }
         public void FindEnemies()
         {
@@ -56,6 +78,7 @@ namespace Game.Fight
             if (nearest == null)
             {
                 StopAttacking();
+                SetIdleAnimation();
                 return;
             }
 
@@ -81,7 +104,18 @@ namespace Game.Fight
             arrow.Initialize(target2D, flightDuration, arrowHeight);
             StartCoroutine(AttackIEnumerator(toMonster, flightDuration));
         }
-
+        protected override IEnumerator AttackIEnumerator(IDamageReciever target, float timeBeforeAttack)
+        {
+            yield return new WaitForSeconds(timeBeforeAttack);
+            Monster nearest = FindNearestAliveMonster(out _);
+            if (nearest == null)
+            {
+                StopAttacking();
+                SetIdleAnimation();
+                yield break;
+            }
+            Attack(target);
+        }
         private Monster FindNearestAliveMonster(out float minDistance)
         {
             minDistance = Mathf.Infinity;
@@ -89,6 +123,7 @@ namespace Game.Fight
             for (int i = 0; i < monsters.Count; ++i)
             {
                 if (!monsters[i].IsUsing) continue;
+                if (monsters[i].IsDead) continue;
 
                 float newDist = Vector3.Distance(monsters[i].transform.localPosition, transform.localPosition);
                 if (newDist < minDistance)
@@ -99,10 +134,7 @@ namespace Game.Fight
             }
             return nearestMonster;
         }
-        private void OnEnable()
-        {
-            Initialize(GameData.Data.PlayerData.Stats);
-        }
+
         #endregion methods
     }
 }

@@ -35,7 +35,11 @@ namespace Game.Fight
         {
             Player.StatsObserver.OnEntityDead.RemoveListener(StopAttacking);
         }
-
+        protected override void SetDamagedAnimation()
+        {
+            base.SetDamagedAnimation();
+            SetMoveAnimation();
+        }
         public void MoveToPlayer()
         {
             Vector3 newPos = Player.transform.localPosition;

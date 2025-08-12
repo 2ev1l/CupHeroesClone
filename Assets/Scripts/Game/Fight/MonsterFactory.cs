@@ -21,14 +21,13 @@ namespace Game.Fight
         /// <summary>
         /// 'Entity'
         /// </summary>
-        private ObjectPool<StaticPoolableObject> monstersPool = null;
+        [SerializeField] private ObjectPool<StaticPoolableObject> monstersPool = new();
         #endregion fields & properties
 
         #region methods
         public void SpawnMonstersInGrid()
         {
             WaveInfo waveInfo = GameData.Data.WaveData.CurrentWaveInfo;
-            monstersPool = new(waveInfo.Monsters[0].Data.Prefab, monsterSpawnPosition);
             int monstersCount = waveInfo.Monsters.Count;
 
             Rect spawnRect = monsterSpawnPosition.rect;
