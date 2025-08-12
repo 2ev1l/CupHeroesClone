@@ -1,3 +1,5 @@
+using Game.DataBase;
+using Game.Serialization.World;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,9 +14,19 @@ namespace Game.Fight
         [SerializeField][Min(1f)] private float moveTimeToPlayer = 7f;
         private const float PLAYER_OFFSET_X = 100;
         private const float PLAYER_OFFSET_Y = 50;
+        private MonsterInfo monsterInfo = null;
         #endregion fields & properties
 
         #region methods
+        /// <summary>
+        /// Use this to initialize monster
+        /// </summary>
+        /// <param name="monsterInfo"></param>
+        public void Initialize(MonsterInfo monsterInfo)
+        {
+            this.monsterInfo = monsterInfo;
+            base.Initialize(monsterInfo.Stats);
+        }
         private void OnEnable()
         {
             Player.StatsObserver.OnEntityDead.AddListener(StopAttacking);
@@ -34,6 +46,11 @@ namespace Game.Fight
         public override void AttackOnTarget()
         {
             Attack(Player);
+        }
+        public override void OnDeath()
+        {
+            GameData.Data.PlayerData.Wallet.IncreaseValue(monsterInfo.MoneyReward);
+            base.OnDeath();
         }
         #endregion methods
     }
