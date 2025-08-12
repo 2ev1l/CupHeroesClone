@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30d754b539c2e8b4b8c77d825a3163b7, type: 3}
-  m_Name: MonsterInfo 0
+  m_Name: MonsterInfo 3
   m_EditorClassIdentifier: 
   data:
-    id: 0
+    id: 3
     stats:
       maxHealth:
-        value: 100
+        value: 150
       health:
-        value: 100
+        value: 150
       attack:
-        value: 1
+        value: 4
       attackSpeed:
         value: 1
     moneyReward: 1

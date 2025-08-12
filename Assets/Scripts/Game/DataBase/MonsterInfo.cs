@@ -14,6 +14,8 @@ namespace Game.DataBase
         [SerializeField] private EntityStats stats = new();
         public int MoneyReward => moneyReward;
         [SerializeField][Min(0)] private int moneyReward = 1;
+        public float MoveTimeToPlayer => moveTimeToPlayer;
+        [SerializeField][Min(1f)] private float moveTimeToPlayer = 7f;
         /// <summary>
         /// 'Entity'
         /// </summary>

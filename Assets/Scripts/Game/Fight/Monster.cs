@@ -10,10 +10,10 @@ namespace Game.Fight
     {
         #region fields & properties
         private static Player Player => Player.Instance;
-        public float MoveTimeToPlayer => moveTimeToPlayer;
-        [SerializeField][Min(1f)] private float moveTimeToPlayer = 7f;
+
         private const float PLAYER_OFFSET_X = 100;
         private const float PLAYER_OFFSET_Y = 50;
+        public MonsterInfo MonsterInfo => monsterInfo;
         private MonsterInfo monsterInfo = null;
         #endregion fields & properties
 
@@ -45,7 +45,7 @@ namespace Game.Fight
             Vector3 newPos = Player.transform.localPosition;
             newPos.x += Random.Range(PLAYER_OFFSET_X * 0.9f, PLAYER_OFFSET_X * 1.1f);
             newPos.y += Random.Range(-PLAYER_OFFSET_Y, PLAYER_OFFSET_Y);
-            MoveToPosition(newPos, moveTimeToPlayer, StartAttacking);
+            MoveToPosition(newPos, monsterInfo.MoveTimeToPlayer, StartAttacking);
         }
         public override void AttackOnTarget()
         {
