@@ -2,11 +2,12 @@ using Game.DataBase;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Universal.Core;
 
 namespace Game.Serialization.World
 {
     [System.Serializable]
-    public class PlayerData
+    public class PlayerData: ICloneable<PlayerData>
     {
         #region fields & properties
         public Wallet Wallet => wallet;
@@ -16,7 +17,14 @@ namespace Game.Serialization.World
         #endregion fields & properties
 
         #region methods
-
+        public PlayerData Clone()
+        {
+            return new()
+            {
+                wallet = wallet.Clone(),
+                stats = stats.Clone()
+            };
+        }
         #endregion methods
     }
 }

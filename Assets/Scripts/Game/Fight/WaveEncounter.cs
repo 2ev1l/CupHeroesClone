@@ -14,6 +14,7 @@ namespace Game.Fight
     public class WaveEncounter : MonoBehaviour
     {
         #region fields & properties
+        public UnityEvent OnNewWaveLoad;
         public UnityEvent OnFightStarted;
         public UnityEvent OnFightEnded;
         public UnityEvent OnWaveReachedMax;
@@ -44,6 +45,7 @@ namespace Game.Fight
             Timer timer = new();
             timer.OnChangeEnd = SpawnMonsters;
             timer.Restart(timeToMove - MonsterFactory.MONSTER_MOVE_TIME);
+            OnNewWaveLoad?.Invoke();
         }
         private void MoveOldMonsters()
         {
