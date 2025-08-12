@@ -87,7 +87,7 @@ namespace Game.Fight
         {
             MonsterInfo currentMonster = waveInfo.Monsters[index].Data;
             Monster monster = (Monster)monstersPool.GetObject();
-            monster.Initialize(currentMonster.Stats);
+            monster.Initialize(currentMonster);
             monster.transform.localPosition = localPos;
             Vector3 finalPosition = monster.transform.localPosition;
             float direction = monsterFinalPosition.localPosition.x - monster.transform.localPosition.x;

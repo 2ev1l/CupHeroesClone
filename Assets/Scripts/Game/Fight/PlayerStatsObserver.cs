@@ -11,32 +11,11 @@ namespace Game.Fight
     public class PlayerStatsObserver : EntityStatsObserver
     {
         #region fields & properties
-        /// <summary>
-        /// <see cref="{T0}"/> - currentValue
-        /// </summary>
-        public UnityEvent<int> OnWalletChangedEvent;
+
         #endregion fields & properties
 
         #region methods
-        protected override void OnSubscribe()
-        {
-            base.OnSubscribe();
-            GameData.Data.PlayerData.Wallet.OnValueChanged += OnWalletChanged;
-        }
-        protected override void OnUnSubscribe()
-        {
-            base.OnUnSubscribe();
-            GameData.Data.PlayerData.Wallet.OnValueChanged -= OnWalletChanged;
-        }
-        private void OnWalletChanged(int currentValue, int changedAmount)
-        {
-            OnWalletChangedEvent?.Invoke(currentValue);
-        }
-        public override void InvokeEvents()
-        {
-            base.InvokeEvents();
-            OnWalletChanged(GameData.Data.PlayerData.Wallet.Value, 0);
-        }
+
         #endregion methods
 
 #if UNITY_EDITOR
