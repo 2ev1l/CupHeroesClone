@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1240622750758163245}
   - component: {fileID: 68026464331031088}
   - component: {fileID: 6740291044595286611}
+  - component: {fileID: 4073026807919089106}
   m_Layer: 5
   m_Name: Monster 0
   m_TagString: Untagged
@@ -90,7 +91,19 @@ MonoBehaviour:
       m_Calls: []
   OnEntityDead:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4073026807919089106}
+        m_TargetAssemblyTypeName: Game.Audio.SoundPlayer, Game.Audio
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHealthChangedAmountEvent:
     m_PersistentCalls:
       m_Calls:
@@ -146,7 +159,27 @@ MonoBehaviour:
   observer: {fileID: 1240622750758163245}
   animator: {fileID: 7768285552522367403}
   attackAnimation: 0
-  moveTimeToPlayer: 5
+  isDead: 0
+--- !u!114 &4073026807919089106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868146085985564172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe9b016f4bb44d48bdbf4d490c48077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipData:
+    clip: {fileID: 8300000, guid: da3e7e7de7dc5b94b8f63961fc352a95, type: 3}
+    playAtRendererCenter: 0
+    positionToPlay: {fileID: 0}
+    render: {fileID: 0}
+    audioType: 0
+    soundScale: 1
+  ___testString: 
 --- !u!1001 &892913580654604584
 PrefabInstance:
   m_ObjectHideFlags: 0

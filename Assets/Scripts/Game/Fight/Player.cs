@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Universal.Collections;
 using Universal.Collections.Generic;
 using Zenject;
@@ -17,6 +18,8 @@ namespace Game.Fight
         #region fields & properties
         private const float MIN_DISTANCE_TO_HAND_ATTACK = 150f;
         public static Player Instance { get; private set; }
+        public UnityEvent OnShootAttack;
+
         [SerializeField] private Transform enemySpawn;
         [Title("Arrows")]
         [SerializeField] private float arrowSpeed = 30f;
@@ -103,6 +106,7 @@ namespace Game.Fight
 
             arrow.Initialize(target2D, flightDuration, arrowHeight);
             StartCoroutine(AttackIEnumerator(toMonster, flightDuration));
+            OnShootAttack?.Invoke();
         }
         protected override IEnumerator AttackIEnumerator(IDamageReciever target, float timeBeforeAttack)
         {
