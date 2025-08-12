@@ -78,7 +78,9 @@ namespace Game.Fight
             if (!increased)
             {
                 OnWaveReachedMax?.Invoke();
+                return;
             }
+
         }
         #endregion methods
     }

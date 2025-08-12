@@ -2875,6 +2875,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4475083127311285375, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+      propertyPath: OnPanelActive.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475083127311285375, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+      propertyPath: OnPanelActive.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475083127311285375, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+      propertyPath: OnPanelActive.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2634152223852375500}
+    - target: {fileID: 4475083127311285375, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+      propertyPath: OnPanelActive.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475083127311285375, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+      propertyPath: OnPanelActive.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateListData
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475083127311285375, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+      propertyPath: OnPanelActive.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Game.UI.Overlay.CardSelectList, Game.UI.Overlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475083127311285375, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+      propertyPath: OnPanelActive.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7903652522826529409, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2958,8 +2986,64 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8949706553968029853, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2634152223852375500}
   m_SourcePrefab: {fileID: 100100000, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+--- !u!224 &2634152223852375498 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6785035843885406263, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+  m_PrefabInstance: {fileID: 2634152223852375497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2634152223852375499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8949706553968029853, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
+  m_PrefabInstance: {fileID: 2634152223852375497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2634152223852375500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2634152223852375499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855d891ccd6091347b72bc7b12447898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemList:
+    prefabRoot: {fileID: 8845828754317714682, guid: ad91a4e4d1be5864ab21803415d75ad3, type: 3}
+    content: {fileID: 2634152223852375498}
+    showItems: 0
+  OnCardGet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 565929729}
+        m_TargetAssemblyTypeName: Universal.Behaviour.StateMachineBehaviour, Universal.Behaviour
+        m_MethodName: ApplyState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1224806869}
+          m_ObjectArgumentAssemblyTypeName: Universal.Behaviour.StateChange, Universal.Behaviour
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 98341990}
+        m_TargetAssemblyTypeName: Game.Fight.WaveEncounter, Game.Fight
+        m_MethodName: CompleteWave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &3025553854131679820
 PrefabInstance:
   m_ObjectHideFlags: 0
