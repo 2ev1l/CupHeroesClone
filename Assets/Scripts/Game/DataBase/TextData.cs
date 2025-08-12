@@ -30,15 +30,6 @@ namespace Game.DataBase
         #endregion methods
 
 #if UNITY_EDITOR
-        [Button(nameof(SaveLanguage))]
-        private void SaveLanguage()
-        {
-            LanguageData data = languageData;
-            string json = JsonUtility.ToJson(data, true);
-            string path = Path.Combine(LanguageData.LanguagePath, $"{LanguageSettings.DEFAULT_LANGUAGE}.json");
-            File.WriteAllText(path, json);
-            Debug.Log(path + " saved");
-        }
 
         [Button(nameof(ExportToTxt))]
         private void ExportToTxt()

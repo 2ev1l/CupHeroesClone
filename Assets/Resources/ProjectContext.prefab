@@ -218,7 +218,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawField: 1
   enableFileLog: 0
-  ignoreEditor: 1
+  ignoreEditor: 0
+  consoleScale: {x: 400, y: 900}
+  textArea: {x: 300, y: 300}
 --- !u!114 &4168741661173051406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +233,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d2dad0f09047cb47bf6f4135dddd5cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Context:
+    playerData:
+      wallet:
+        value: 0
+      stats:
+        maxHealth:
+          value: 100
+        health:
+          value: 100
+        attack:
+          value: 10
+        attackSpeed:
+          value: 1
+    waveData:
+      currentWave: 0
   doAutoSave: 0
   autoSaveSeconds: 60
   storedTime: 0

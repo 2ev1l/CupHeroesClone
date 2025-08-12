@@ -49,19 +49,11 @@ namespace Game.UI.Text
                 el.Load();
             }
         }
-        public void LoadLanguage(string name)
+        public void LoadLanguage()
         {
-            try
-            {
-                TextData.LoadedData = LanguageData.GetLanguage(name);
-            }
-            catch
-            {
-                Debug.LogError($"Error - Can't find a language. Settting {LanguageSettings.DEFAULT_LANGUAGE} by default.");
-                SettingsData.Data.LanguageSettings.ResetLanguage();
-            }
+            SettingsData.Data.LanguageSettings.ResetLanguage();
         }
-        public void LoadChoosedLanguage() => LoadLanguage(SettingsData.Data.LanguageSettings.ChoosedLanguage);
+        public void LoadChoosedLanguage() => LoadLanguage();
         #endregion methods
     }
 }
