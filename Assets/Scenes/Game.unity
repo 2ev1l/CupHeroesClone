@@ -234,6 +234,8 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+  monsterDeathPosition: {fileID: 654315169}
+  monsterSpawnParent: {fileID: 1456926178}
 --- !u!114 &98341991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +251,10 @@ MonoBehaviour:
   monsterSpawnPosition: {fileID: 1456926178}
   monsterFinalPosition: {fileID: 555829820}
   randomFinalX: 30
+  monstersPool:
+    originalPrefab: {fileID: 6740291044595286611, guid: 091418b281e652a42a13f68145771b30, type: 3}
+    parentForSpawn: {fileID: 1456926178}
+    hideObjectsInHierarchy: 0
 --- !u!224 &117941788 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1267922883653650156, guid: b7cc6a39f5c82e84dbd025d67fc2ba60, type: 3}
@@ -1065,6 +1071,41 @@ MonoBehaviour:
       value: 10
     attackSpeed:
       value: 1
+--- !u!1 &654315168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 654315169}
+  m_Layer: 5
+  m_Name: Monster Death Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &654315169
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654315168}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1121029789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -278, y: -245}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &695352518 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7903652522826529409, guid: ad23a0586e59b7b4196e709d907f26c1, type: 3}
@@ -1662,6 +1703,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 654315169}
   - {fileID: 1456926178}
   m_Father: {fileID: 1834415940}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

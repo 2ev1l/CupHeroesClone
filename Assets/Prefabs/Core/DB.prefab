@@ -57,4 +57,5 @@ MonoBehaviour:
     data:
     - {fileID: 11400000, guid: 0033bd9ddf9e0cb4fbfdb77d5f40a114, type: 2}
     - {fileID: 11400000, guid: f1a0741a84adc4e4994c40352f64efa8, type: 2}
+    - {fileID: 11400000, guid: f18ae35cf433d5942b58d9d604decf8d, type: 2}
   automaticallyUpdateEditor: 0
