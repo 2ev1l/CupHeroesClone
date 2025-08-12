@@ -16,6 +16,7 @@ namespace Game.UI.Overlay
         public void SpawnText(string text)
         {
             FloatingText obj = (FloatingText)texts.GetObject();
+            obj.transform.position = texts.ParentForSpawn.transform.position;
             obj.Initialize(text);
         }
         #endregion methods

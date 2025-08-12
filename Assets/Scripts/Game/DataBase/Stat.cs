@@ -8,6 +8,10 @@ namespace Game.DataBase
     {
         #region fields & properties
         /// <summary>
+        /// <see cref="{T0} - changedAmount"/>
+        /// </summary>
+        public UnityAction<float> OnValueChangedAmount;
+        /// <summary>
         /// <see cref="{T0} - changedValue"/>
         /// </summary>
         public UnityAction<float> OnValueChanged;
@@ -34,8 +38,10 @@ namespace Game.DataBase
         {
             if (value < 0)
                 throw new System.ArgumentOutOfRangeException("Value");
+            float oldValue = this.value;
             this.value = value;
             OnValueChanged?.Invoke(value);
+            OnValueChangedAmount?.Invoke(value - oldValue);
         }
 
         /// <summary>

@@ -91,6 +91,21 @@ MonoBehaviour:
   OnEntityDead:
     m_PersistentCalls:
       m_Calls: []
+  OnHealthChangedAmountEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3480872441428995610}
+        m_TargetAssemblyTypeName: Game.UI.Overlay.ChangedValueTextAnimation, Game.UI.Overlay
+        m_MethodName: DoAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   stats:
     maxHealth:
       value: 100
@@ -130,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   observer: {fileID: 1240622750758163245}
   animator: {fileID: 7768285552522367403}
+  attackAnimation: 0
   moveTimeToPlayer: 5
 --- !u!1001 &892913580654604584
 PrefabInstance:
@@ -513,3 +529,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8579330594867937351, guid: d7233ffb540d51446a16634b46f87707, type: 3}
   m_PrefabInstance: {fileID: 7459223789437134997}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3480872441428995610 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6326140820388398735, guid: d7233ffb540d51446a16634b46f87707, type: 3}
+  m_PrefabInstance: {fileID: 7459223789437134997}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf1c7dda179b51468fbf3d0da608e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

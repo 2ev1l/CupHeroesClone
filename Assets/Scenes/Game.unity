@@ -1053,6 +1053,9 @@ MonoBehaviour:
   OnEntityDead:
     m_PersistentCalls:
       m_Calls: []
+  OnHealthChangedAmountEvent:
+    m_PersistentCalls:
+      m_Calls: []
   stats:
     maxHealth:
       value: 100
@@ -1595,6 +1598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textFactory: {fileID: 931434756}
+  doOnIncrease: 1
+  doOnDecrease: 1
 --- !u!114 &931434756
 MonoBehaviour:
   m_ObjectHideFlags: 0

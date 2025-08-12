@@ -20,7 +20,8 @@ namespace Game.Fight
 
         [Title("Special Events")]
         public UnityEvent OnEntityDead;
-
+        public UnityEvent<float> OnHealthChangedAmountEvent;
+        
         /// <summary>
         /// May be null
         /// </summary>
@@ -69,6 +70,7 @@ namespace Game.Fight
         {
             stats.MaxHealth.OnValueChanged += OnMaxHealthChanged;
             stats.Health.OnValueChanged += OnHealthChanged;
+            stats.Health.OnValueChangedAmount += OnHealthChangedAmount;
             stats.Attack.OnValueChanged += OnAttackChanged;
             stats.AttackSpeed.OnValueChanged += OnAttackSpeedChanged;
         }
@@ -76,10 +78,15 @@ namespace Game.Fight
         {
             stats.MaxHealth.OnValueChanged -= OnMaxHealthChanged;
             stats.Health.OnValueChanged -= OnHealthChanged;
+            stats.Health.OnValueChangedAmount -= OnHealthChangedAmount;
             stats.Attack.OnValueChanged -= OnAttackChanged;
             stats.AttackSpeed.OnValueChanged -= OnAttackSpeedChanged;
         }
         private void OnMaxHealthChanged(float value) => OnMaxHealthChangedEvent?.Invoke(value);
+        private void OnHealthChangedAmount(float value)
+        {
+            OnHealthChangedAmountEvent?.Invoke(value);
+        }
         private void OnHealthChanged(float value)
         {
             OnHealthChangedEvent?.Invoke(value);
