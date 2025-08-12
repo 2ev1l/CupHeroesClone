@@ -99,7 +99,7 @@ namespace Game.Fight
             float distance2D = Vector2.Distance(start2D, target2D);
             float flightDuration = distance2D / arrowSpeed;
 
-            target2D = new(toMonster.transform.position.x - distance2D * flightDuration / toMonster.MoveTimeToPlayer, toMonster.transform.position.y);
+            target2D = new(toMonster.transform.position.x - distance2D * flightDuration / toMonster.MonsterInfo.MoveTimeToPlayer, toMonster.transform.position.y);
 
             arrow.Initialize(target2D, flightDuration, arrowHeight);
             StartCoroutine(AttackIEnumerator(toMonster, flightDuration));

@@ -47,10 +47,17 @@ namespace Game.UI.Overlay
         private void AddStatChanges()
         {
             List<Stat> stats = GameData.Data.PlayerData.Stats.AllStats;
+            Stat health = stats[1];
             stats.RemoveAt(1);
             foreach (StatChange stat in Context.StatChanges)
             {
                 if (!stats.Exists(x => x.GetStatType().Equals(stat.StatType), out Stat exists)) continue;
+                if (exists is Health maxHealth)
+                {
+                    maxHealth.Value += stat.ChangeValue;
+                    health.Value += stat.ChangeValue;
+                    continue;
+                }
                 exists.Value += stat.ChangeValue;
             }
         }

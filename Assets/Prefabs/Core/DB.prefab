@@ -47,15 +47,30 @@ MonoBehaviour:
   monsters:
     data:
     - {fileID: 11400000, guid: b46d103f5f12c94468e2fa425df3138e, type: 2}
+    - {fileID: 11400000, guid: fdf0cc9d3a0b7474dab78d52518d17d5, type: 2}
+    - {fileID: 11400000, guid: 194334cb207e2cb4688897d944027680, type: 2}
+    - {fileID: 11400000, guid: eb229e273732d5441baeb8c8214226c1, type: 2}
+    - {fileID: 11400000, guid: 3feba381d4756d2498822ed297229e19, type: 2}
+    - {fileID: 11400000, guid: 4902656c586689842a58f543d8ca2b9b, type: 2}
   cards:
     data:
     - {fileID: 11400000, guid: 7172474493bcf9d4eb4d0cf0e8c05b4a, type: 2}
     - {fileID: 11400000, guid: 29217f33b0f4680419b9e06380e98a2d, type: 2}
     - {fileID: 11400000, guid: 5d7aaa89ef897fe458bbdf4c6605bde8, type: 2}
     - {fileID: 11400000, guid: ef02dd3482c41bb46a335f24d8532fab, type: 2}
+    - {fileID: 11400000, guid: 937482f00f7330b4ca5c64a8b9267e76, type: 2}
+    - {fileID: 11400000, guid: 794126d03e577d64cbee0938a333cd47, type: 2}
+    - {fileID: 11400000, guid: eaf9200a928013949996dc01b3383d0b, type: 2}
+    - {fileID: 11400000, guid: 9f880975059f81b49a9cb288256cc6ae, type: 2}
+    - {fileID: 11400000, guid: b01ebce447ec1594ca8622c6266df079, type: 2}
   waves:
     data:
     - {fileID: 11400000, guid: 0033bd9ddf9e0cb4fbfdb77d5f40a114, type: 2}
     - {fileID: 11400000, guid: f1a0741a84adc4e4994c40352f64efa8, type: 2}
     - {fileID: 11400000, guid: f18ae35cf433d5942b58d9d604decf8d, type: 2}
+    - {fileID: 11400000, guid: 4b4b70c15343a1d4a97444be56f5da70, type: 2}
+    - {fileID: 11400000, guid: e68041ef2132abb4a8f843e067691dd8, type: 2}
+    - {fileID: 11400000, guid: ca2650946c5d1524282a45b6d77289a6, type: 2}
+    - {fileID: 11400000, guid: 6d9a67cf107403c41bb3f2a4df0170b9, type: 2}
+    - {fileID: 11400000, guid: 50a78325b7d69674683c8ee5b5a8afdb, type: 2}
   automaticallyUpdateEditor: 0

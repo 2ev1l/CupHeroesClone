@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30d754b539c2e8b4b8c77d825a3163b7, type: 3}
-  m_Name: MonsterInfo 0
+  m_Name: MonsterInfo 4
   m_EditorClassIdentifier: 
   data:
-    id: 0
+    id: 4
     stats:
       maxHealth:
-        value: 100
+        value: 175
       health:
-        value: 100
+        value: 175
       attack:
-        value: 1
+        value: 4
       attackSpeed:
         value: 1
-    moneyReward: 1
-    moveTimeToPlayer: 6
+    moneyReward: 2
+    moveTimeToPlayer: 4
     prefab: {fileID: 6740291044595286611, guid: 091418b281e652a42a13f68145771b30, type: 3}
